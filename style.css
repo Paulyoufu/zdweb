@@ -1,0 +1,616 @@
+.inputBackGroundColor {
+    background-color: white;
+}
+
+.fontSize {
+    font-size: 20px;
+}
+
+.blank {
+    height: 47px;
+}
+.inpWidth{
+    width: 950px;}
+#btnChooseProvice {
+    font-size: 20px;
+    width: 80px;
+    height: 40px;
+    color: white;
+    margin-top: -8px;
+    margin-left: -20px;
+}
+
+.validateStyle{
+    font-size: 18px;color:palevioletred;margin-left: 15px;position: relative;top: 20px;
+}
+.numberCss {
+    width: 860px;
+    margin-left: -1px
+}
+.numberCaret {
+    margin-top: -4px;
+    margin-left: -22px!important;
+    color: white!important;
+}
+.inpCurrent {
+    -webkit-transition: border linear .2s, -webkit-box-shadow linear .5s;
+    border-color: rgba(255, 143, 0, .75);
+    -webkit-box-shadow: 0 0 18px #ff8f00;
+}
+
+.imgSamllCarShow {
+    margin-top: 0px;
+    margin-left: 12px;
+}
+
+.imgSamllCarHide {
+    margin-top: 0px;
+    margin-left: 12px;
+}
+
+.imgBigCarShow {
+    margin-top: -10px;
+    margin-left: 8px;
+}
+
+.imgbigcarHide {
+    margin-top: -10px;
+    margin-left: 8px;
+}
+
+.carTypeOtherShow {
+    margin-top: -10px;
+    margin-left: 8px;
+}
+
+.cartypeotherHide {
+    margin-top: -10px;
+    margin-left: 8px;
+}
+
+#chooseBigCar {
+    margin-left: 370px;
+    margin-top: -47px;
+}
+
+#chooseMiddleCar {
+    margin-left: 370px;
+    margin-top: -47px;
+}
+
+
+#selType {
+    background-color: white;
+    width: 150px;
+}
+
+#chooseBigCar {
+    margin-left: 520px;
+    margin-top: -48px;
+}
+
+.imgChooseOther {
+    margin-top: -15px;
+    margin-left: 10px;
+}
+
+.inpStyle {
+    height: 40px;
+    font-size: 20px;
+    width: 160px;
+}
+
+#selType li {
+    font-size: 20px;
+}
+
+#inpvalue {
+    display: none
+}
+
+#selList {
+    margin-left: 620px;
+    margin-top: -60px;
+}
+
+#btnGroup a {
+    background-color: #4b5979;
+    color: white;
+}
+
+#btnGroup a:hover {
+    background-color: #4b8be9;
+}
+
+#data {
+    padding-top: 20px;
+    margin: 0 30px;
+}
+
+#data a {
+    margin: 7px;
+    width: 100px;
+}
+
+#wordAtoM a {
+    margin: 8px;
+    width: 83px;
+}
+
+#wordAtoM {
+    margin: 0 30px
+}
+
+#wordMtoZ a {
+    margin: 8px;
+    width: 83px;
+}
+
+#btnFun {
+    margin: 2px 30px;
+}
+
+#wordMtoZ {
+    margin: 0 30px
+}
+
+.glyphicon-ok {
+    color: green;
+    margin-top: -2px;
+}
+
+#container {
+    width: 98%;
+    z-index: -1;
+}
+
+.titleBar {
+    width: 228px;
+}
+
+.img {
+    margin: 0 19px 0 46px;
+}
+
+.title {
+    position: relative;
+    top: 5px;
+    font-size: 22px;
+
+}
+
+.divContent {
+    margin-top: 26px;
+}
+
+.inp {
+    margin: -43px 46px 26px 228px;
+}
+
+.carType {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.carTypeBar {
+    margin-top: -32px
+}
+
+#samllCarTitle {
+    position: relative;
+    top: 5px;
+}
+
+#middleCarTitle {
+    position: relative;
+    top: 5px;
+}
+
+
+#bigCarType {
+    position: relative;
+    top: -2px;
+}
+
+.provice {
+    position: absolute;
+    z-index: 2;
+    width: 570px;
+    height: 300px;
+    background-color: #ede9e9;
+    margin-left: 210px;
+    margin-top: -278px;
+    display: none;
+}
+
+.provice > .row {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.provice > .row a {
+    margin: 5px 5px 0 5px;
+    background-color: #fff;
+    color: #cacacb;
+    font-size: 21px;
+}
+
+.spanDelCss {
+    background: url('dm.png');
+    no-repeat: 10px center;
+    margin-top: 10px;
+}
+
+#spanDel:hover{
+    background: url('delete_pre.png');
+    no-repeat: 10px center;
+}
+
+#btnChooseProvice {
+    background-color: #4b5979;
+}
+
+#btnGroup a {
+    font-size: 22px;
+}
+
+#btnRest {
+    margin-left: 5px;
+    width: 30%;
+    background-color: #00ccaa;
+}
+
+#btnOK {
+    width: 30%;
+    margin-left: 10px;
+    background-color: #00ccaa;
+}
+
+#chooseMiddleCar
+
+
+
+#btnStatusNo {
+    width: 25%;
+    margin-left: 150px;
+    height: 50px;
+    background-color: #c5c5c5;
+    border: 5px solid #d0d3d7;
+}
+
+#btnStatusYes {
+    width: 25%;
+    margin-left: 150px;
+    height: 50px;
+    background-color: #ff5e64;
+    border: 5px solid #438ae7;
+}
+
+#btnGroup {
+    background-color: #2e384c;
+    width: 100%;
+    height: 294px;
+    margin-top: 117px;
+    z-index: -1;
+}
+
+.btnClose {
+    width: 58px;
+    height: 54px;
+    background: url('gouxuan.png');
+    background-repeat: no-repeat;
+    no-repeat: 0px center;
+}
+.btnCloseCss{
+    margin-top: 6px;margin-left: 3px;width: 58px;height: 52px;
+}
+
+body {
+    margin: 0;
+}
+
+#btnDisabled {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    top: 0;
+    opacity: 0.3;
+}
+
+.caretCss {
+    margin-top: 18px;
+    position: fixed;
+}
+
+#getSelVal:hover{
+    background-image: url('drop-down_pre.png');
+}
+#getSelVal{
+    background-image: url('drop-down_nor.png');
+}
+
+.chooseCarTypeLocation {
+    margin-top: -10px;
+    margin-left: 7px;
+    margin-left: 2px;
+}
+
+.leter {
+    letter-spacing: 2px;
+    width:80%;
+}
+
+/*
+网页
+*/
+
+.wCarNumIcon {
+    margin: 27px 12px 20px 15px;
+}
+
+.wCarCountIcon {
+    margin: 0px 12px 20px 12px;
+}
+
+.wTitle {
+    font-size: 18px;
+    position: relative;
+    top: 18px;
+}
+
+.wTitleCount {
+    font-size: 18px;
+    position: relative;
+    top: -6px;
+}
+
+.wInp {
+    margin: -45px 0px 20px 180px;
+    width: 150px;
+    position: relative;
+    top: -3px;
+}
+
+.wInpNumber {
+    margin: -45px 0px -38px 180px;
+    width: 150px;
+    position: relative;
+    top: -3px;
+}
+
+.spanValidate{position:relative;z-index:1;top: 10px;left:235px;color: palevioletred;}
+.spanValidateExtend{position:relative;z-index:1;top: 4px;left:50px;color: palevioletred;}
+
+.wTypeBigCar {
+    margin-left: 270px;
+    margin-top: -37px;
+}
+
+.wTypeOther {
+    margin-top: 20px;
+}
+
+.selectOtherType {
+    margin-left: 240px;
+    margin-top: -50px;
+}
+
+.statusBar {
+    margin: 20px 26px 20px 10px;
+}
+
+.wBtnSuccess {
+    /* margin: 24px 21px 20px 120px;*/
+    background-color: #00d3b0;
+    position: relative;
+    width: 100px;
+    left: 60px;
+}
+
+.wBtnCancel {
+    /*margin: 24px 21px 0px 0px;*/
+    background-color: #ff5e64;
+    width: 100px;
+    position: relative;
+    top: 0px;
+    left: 90px;
+
+}
+
+.btnOk {
+    position: relative;
+    top: -320px;
+    left: -120px;
+}
+
+#caret {
+    position: relative;
+    z-index: 1;
+    left: -30px
+}
+
+#provicePC a {
+    background-color: white;
+    color: #1091E8;
+    margin: 1px;
+}
+
+#provicePC .row {
+    margin-top: 10px;
+    margin-left: 13px;
+}
+
+#provicePC {
+    height: 188px;
+    width: 345px;
+    z-index: 5;
+    position: relative;
+    background-color: #aedaf5;
+    top: -400px;
+    display: none;
+}
+
+.mt5 {
+    margin-top: 6px;
+}
+
+.mt51 {
+    margin-top: 6px;
+    position: relative;
+    left:1px;
+}
+.mt-15{
+    margin-top: -15px;
+}
+
+.mt-3{
+    margin-top: -2px;
+}
+
+.btnClosePC {
+    width: 35px;
+    height: 32px;
+    background: url('gopc.png');
+    no-repeat: 0px center;
+    background-color: #00d3b0;
+}
+
+.cantainer {
+    margin-left: 8px;
+    height: 500px;
+}
+
+#inpvalue {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+#carNumberTitle {
+    position: relative;
+    top: -7px;
+}
+
+#chooseProvicePC {
+    width: 50px;
+    height: 30px;
+    background-color: #007ed6;
+    color: white;
+}
+
+.number {
+    width: 100px;
+    margin-left: 55px;
+    margin-top: -80px;
+    z-index: 1;
+    position: relative;
+    top: -26px;
+}
+
+#chooseBigCarPC {
+    margin-left: 270px;
+    margin-top: -39px;
+}
+
+#chooseOtherPC {
+    margin-top: -10px;
+    margin-left: 180px;
+}
+
+#selOtherTypecss {
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+#getSelValPC {
+    width: 100px;
+    font-size: 12px !important;
+    height: 32px;
+    background-image: url('xL_nor.png');
+}
+
+#getSelValPC:hover{
+    background-image: url('xL_pre.png');
+}
+
+/*dq_btn_hover.png*/
+#chooseProvicePC:hover{
+    background-image: url("dq_btn_hover.png");
+}
+#chooseProvicePC{
+    background-image: url("dq_btn_nor.png");
+}
+
+
+
+.loading {
+    height: 188px;
+    width: 345px;
+    z-index: 5;
+    position: relative;
+    background-color: #aedaf5;
+    top: -490px;
+    display: none;
+}
+
+@media screen and (min-width: 1199px){
+    #sDel{ display: none;  }
+}
+
+
+
+@media screen and (max-width: 1199px) {
+    #number{
+        margin-left: 50px;
+        width:280px;
+    }
+    #count
+    {
+        width:380px;
+    }
+    #tel
+    {
+        width: 380px;
+    }
+    #btnGroup
+    {
+        margin-top: 400px;
+        height: 557px;
+    }
+    #points
+    {
+        width:380px;
+    }
+    #btnStatusNo
+    {
+        margin-top: -60px;
+        margin-left: 380px;
+        width: 300px;
+    }
+    #btnOK
+    {
+        width:150px;
+    }
+    #btnRest
+    {
+        width: 150px;
+    }
+
+
+    #data a{
+        width: 125px;}
+    #wordAtoM a{
+        width: 100px;
+
+    }
+    #wordAtoM{
+        margin-top: -80px;}
+    #spanDel
+    {
+        display: none;
+
+    }
+}
+

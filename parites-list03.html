@@ -1,0 +1,279 @@
+<div ng-controller="PartiesListCtrl03 as vm" id="paries03">
+    <div id="container">
+        <form class="form-horizontal" name="myForm" novalidate>
+            <div class="blank"></div>
+            <div class="form-group" style="margin-left:100px ">
+                <div class="titleBar"><img class="img" src="cphm_pic.png" alt=""/>
+                    <span class="title">车牌号码</span>
+                </div>
+                <div class="inp">
+                    <a href="" class="btn btn-lg col-sm-1">
+                        <input id="btnChooseProvice" type="text"
+                               readonly="true" class="btn btn-sm" ng-model="parties3[0].provice"/>
+                        <span  class="caret numberCaret"></span>
+                    </a>
+                    <input class="input-lg col-sm-11 letter numberCss" type="text" id="number" style="width:65%"
+                           ng-disabled="parties3[0].disabled" name="num"
+                           ng-model="parties3[0].number" ng-readonly="true" required/>
+                    <span  ng-show="parties3[0].numberValidate"  class="validateStyle" >{{parties3[0].carNumVal}}</span>
+                    <!--<span style="color:red" ng-show="myForm.num.$dirty && myForm.num.$invalid">
+                     <span ng-show="myForm.num.$error.required">用户名是必须的。</span>
+                     </span>-->
+                </div>
+            </div>
+
+            <div class="form-group divContent" style="margin-left:100px ">
+                <div class="titleBar">
+                    <img src="clfds_pic.png" class="img" alt=""/>
+                    <span class="title">处理罚单数</span>
+                </div>
+
+                <div class="inp">
+                    <input class="input-lg col-sm-12 letter inpWidth" type="text" id="count" ng-disabled="parties3[0].disabled" ng-model="parties3[0].count"
+                           ng-readonly="true"
+                           style="ime-mode:disabled;width: 73%;"/>
+                    <span  ng-show="parties3[0].countValidate"  class="validateStyle">{{parties3[0].countVal}}</span>
+                </div>
+            </div>
+
+            <div class="form-group divContent" style="margin-left:100px ">
+                <div class="titleBar">
+                    <img class="img" src="kfs_pic.png" alt=""/>
+                    <span class="title">扣分数</span>
+                </div>
+                <div class="inp">
+                    <input class="input-lg col-sm-12 letter inpWidth" type="text" id="points" ng-disabled="parties3[0].disabled"
+                           ng-model="parties3[0].points" ng-readonly="true" style="width: 73%;" />
+                    <span  ng-show="parties3[0].pointsValidate"   class="validateStyle">{{parties3[0].pointsVal}}</span>
+                </div>
+            </div>
+
+            <div class="form-group divContent" style="margin-left:100px ">
+                <div class="titleBar"><img class="img" src="telephone_pic.png" alt=""/>
+                    <span class="title">电话号码</span>
+                </div>
+                <div class="inp">
+                    <input class="input-lg col-sm-12 letter inpWidth" type="text" id="tel" ng-disabled="parties3[0].disabled"
+                           ng-model="parties3[0].telnumber" ng-readonly="true" style="width: 73%;"/>
+                    <span  ng-show="parties3[0].telValidate"  class="validateStyle">{{parties3[0].telVal}}</span>
+                </div>
+            </div>
+            <div class="form-group divContent" id="chooseType" style="margin-left:100px ">
+
+                <div class="titleBar">
+                    <img class="img" src="cllx_pic.png" alt=""/>
+                    <span class="title">车辆种类</span>
+                </div>
+                <div class="inp carTypeBar " id="chooseSamllCar">
+                    <span id="samllCarTitle" class="carType">小型</span>
+                             <span ng-show="parties3[0].smallCar" name="radio">
+                               <img id="imgSamllCarShow" src="choose_btn_pre.png"
+                                    css="chooseCarTypeLocation imgSamllCar imgSamllCarShow" alt=""
+                                    style="margin-left: 8px;"/>
+                             </span>
+                             <span ng-show="!parties3[0].smallCar" name="radio">
+                               <img id="imgSamllCarHide" src="choose_btn_nor.png" css="imgSamllCar imgSamllCarHide"
+                                    alt=""
+                                    style="margin-left: 8px;"/>
+                             </span>
+                </div>
+
+                <div class="inp carTypeBar " id="chooseMiddleCar">
+                    <span id="bigCarType" class="carType">中型</span>
+                             <span ng-show="parties3[0].middleCar" name="radio">
+                               <img id="imgBigCarShow" src="choose_btn_pre.png" alt=""
+                                    class="imgBigCarShow"/>
+                             </span>
+                             <span ng-show="!parties3[0].middleCar" name="radio">
+                               <img src="choose_btn_nor.png" class="imgbigcarHide"/>
+                             </span>
+                </div>
+
+                <div class="inp carTypeBar " id="chooseBigCar">
+                    <span class="carType">大型   </span>
+
+                             <span ng-show="parties3[0].bigCar" name="radio">
+                               <img src="choose_btn_pre.png" class="carTypeOtherShow" alt=""/>
+                             </span>
+                             <span ng-show="!parties3[0].bigCar" name="radio">
+                               <img src="choose_btn_nor.png" alt="" class="cartypeotherHide"/>
+                             </span>
+                </div>
+
+                <div id="selList" class="inp carTypeBar " >
+                    <span class="carType" style = "position: relative; top: 5px" >其它</span><!--!parties3[0].other    ng-disabled="true" readonly="true"-->
+                    <div class="btn-group dropdown">
+                        <input   id="getSelVal" type="button"
+                                 class="btn btn-default dropdown-toggle inpStyle"
+                                 data-toggle="dropdown" value="{{parties3[0].otherType}}"  style="width: 120px;"/>
+                        <span class="caret" style="margin-top: 20px;margin-left: -15px;"></span>
+                        <ul id="selType" class="dropdown-menu" ng-model="parties3[0].otherType">
+                            <li ng-repeat="setCarType in vm.setCarType" ng-click="selType($index)">
+                                <a href="">{{setCarType.type}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+
+
+                     <div class="dropdown">
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1"
+                            data-toggle="dropdown">
+                        主题
+                        <span class="caret"></span>
+                    </button>
+
+                    <ul id="selType" class="dropdown-menu" ng-model="parties3[0].otherType" role="menu" aria-labelledby="dropdownMenu1">
+                        <li ng-repeat="setCarType in vm.setCarType" ng-click="selType($index)" role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">{{setCarType.type}}</a>
+                        </li>
+                    </ul>
+
+
+
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">Java</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+                        </li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation">
+                            <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+                        </li>
+                    </ul>
+                </div>-->
+
+
+
+
+
+
+
+                <div class="inp carTypeBar">
+                    <span  ng-show="parties3[0].typeValidate"   class="validateStyle">{{parties3[0].carType}}</span>
+                </div>
+
+            </div>
+            <input id="inpvalue" disabled="disabled" type=" text" ng-model="parties3[0].status" ng-disabled="isbool">
+        </form>
+    </div><!--.contaier over -->
+    <div id="proviceList" class="provice">
+        <div class="row">
+            <a href="" class="btn btn-lg">京</a>
+            <a href="" class="btn btn-lg">沪</a>
+            <a href="" class="btn btn-lg">浙</a>
+            <a href="" class="btn btn-lg">苏</a>
+            <a href="" class="btn btn-lg">粵</a>
+            <a href="" class="btn btn-lg">鲁</a>
+            <a href="" class="btn btn-lg">晋</a>
+            <a href="" class="btn btn-lg">冀</a>
+        </div>
+        <div class="row">
+            <a href="" class="btn btn-lg">预</a>
+            <a href="" class="btn btn-lg">川</a>
+            <a href="" class="btn btn-lg">渝</a>
+            <a href="" class="btn btn-lg">辽</a>
+            <a href="" class="btn btn-lg">吉</a>
+            <a href="" class="btn btn-lg">黑</a>
+            <a href="" class="btn btn-lg">皖</a>
+            <a href="" class="btn btn-lg">鄂</a>
+        </div>
+        <div class="row">
+            <a href="" class="btn btn-lg">湘</a>
+            <a href="" class="btn btn-lg">赣</a>
+            <a href="" class="btn btn-lg">闽</a>
+            <a href="" class="btn btn-lg">陕</a>
+            <a href="" class="btn btn-lg">甘</a>
+            <a href="" class="btn btn-lg">宁</a>
+            <a href="" class="btn btn-lg">蒙</a>
+            <a href="" class="btn btn-lg">津</a>
+        </div>
+        <div class="row">
+            <a href="" class="btn btn-lg">贵</a>
+            <a href="" class="btn btn-lg">云</a>
+            <a href="" class="btn btn-lg">桂</a>
+            <a href="" class="btn btn-lg">琼</a>
+            <a href="" class="btn btn-lg">青</a>
+            <a href="" class="btn btn-lg">新</a>
+            <a href="" class="btn btn-lg">藏</a>
+            <img id="btnClose" src="gouxuan.png" class="btnCloseCss"/>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+
+    <div id="btnGroup">
+        <div class="row" id="data">
+            <a class="btn btn-lg col-sm-1">1</a>
+            <a class="btn btn-lg col-sm-1">2</a>
+            <a class="btn btn-lg col-sm-1">3</a>
+            <a class="btn btn-lg col-sm-1">4</a>
+            <a class="btn btn-lg col-sm-1">5</a>
+            <a class="btn btn-lg col-sm-1">6</a>
+            <a class="btn btn-lg col-sm-1">7</a>
+            <a class="btn btn-lg col-sm-1">8</a>
+            <a class="btn btn-lg col-sm-1">9</a>
+            <a class="btn btn-lg col-sm-1">0</a>
+            <a id="spanDel" class="btn  col-sm-2 spanDelCss" style="width: 129px;height: 52px;border-radius:10px;">-</a>
+        </div><!--data over-->
+
+        <div id="wordAtoM" class="row">
+            <a class="btn btn-lg col-sm-1">A</a>
+            <a class="btn btn-lg col-sm-1">B</a>
+            <a class="btn btn-lg col-sm-1">C</a>
+            <a class="btn btn-lg col-sm-1">D</a>
+            <a class="btn btn-lg col-sm-1">E</a>
+            <a class="btn btn-lg col-sm-1">F</a>
+            <a class="btn btn-lg col-sm-1">G</a>
+            <a class="btn btn-lg col-sm-1">H</a>
+            <a class="btn btn-lg col-sm-1">I</a>
+            <a class="btn btn-lg col-sm-1">J</a>
+            <a class="btn btn-lg col-sm-1">K</a>
+            <a class="btn btn-lg col-sm-1">L</a>
+            <a class="btn btn-lg col-sm-1">M</a>
+
+
+            <a class="btn btn-lg col-sm-1">N</a>
+            <a class="btn btn-lg col-sm-1">O</a>
+            <a class="btn btn-lg col-sm-1">P</a>
+            <a class="btn btn-lg col-sm-1">Q</a>
+            <a class="btn btn-lg col-sm-1">R</a>
+            <a class="btn btn-lg col-sm-1">S</a>
+            <a class="btn btn-lg col-sm-1">T</a>
+            <a class="btn btn-lg col-sm-1">U</a>
+            <a class="btn btn-lg col-sm-1">V</a>
+            <a class="btn btn-lg col-sm-1">W</a>
+            <a class="btn btn-lg col-sm-1">X</a>
+            <a class="btn btn-lg col-sm-1">Y</a>
+            <a class="btn btn-lg col-sm-1">Z</a>
+            <a id="sDel" class="btn  col-sm-2 spanDelCss" style="width: 129px;height: 52px;border-radius:10px;">-</a>
+
+
+
+        </div><!--WO4RD OVER-->
+        <div id="btnFun" class="row">
+            <span id="btnRest" class="btn btn-lg" ng-click="removeAll()">重置</span>
+            <span id="btnOK" class="btn btn-lg" ng-disabled="parties3[0].disabled" ng-click="status()">确认</span>
+            <span id="btnStatusNo" class="btn btn-lg" ng-show="!parties3[0].status" style="background-color: #D3D3D3">
+                <span>确认全部信息无误后,请点击"确认"</span>
+            </span>
+                <span id="btnStatusYes" class="btn btn-lg" ng-show="parties3[0].status">
+                    <span>用户已确认</span>
+                    <span class="glyphicon glyphicon-ok pull-right"></span>
+                </span>
+        </div>
+    </div>
+
+    <div class="divDisabled" id="btnDisabled" ng-show="parties3[0].status">
+
+    </div>
+</div>
